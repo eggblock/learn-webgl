@@ -1,5 +1,5 @@
 namespace Work.Lighting {
-    export class Lighting extends HomeWork {
+    export class LightingNormal extends HomeWork {
 
         public readonly vertices = [
                 -0.5, -0.5, -0.5,  0.0,  0.0, -1.0,
@@ -57,7 +57,7 @@ namespace Work.Lighting {
         public async init() {
             let gl = this.work.gl;
             this.lampshader = await Shader.create('./glsl/transfromations2.vert', './glsl/colors.lamp.frag', gl);
-            let shader: Shader = this.shader = await Shader.create('./glsl/lighting/lighting.normal.vert', './glsl/lighting/lighting.ambient.frag', gl);
+            let shader: Shader = this.shader = await Shader.create('./glsl/lighting/lighting.normal.vert', './glsl/lighting/lighting.normal.frag', gl);
 
             let program = this.program = shader.ID;
 
