@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/gl-matrix": "^2.4.4",
+    "@types/jquery": "^3.3.22",
+    "@types/lodash": "^4.14.118",
+    "http-server": "^0.11.1",
+    "typescript": "3.0.x"
+  },
+  "scripts": {
+    "server": "http-server ./dist -p80 -c-1 -o",
+    "dev": "tsc"
+  }
+}
