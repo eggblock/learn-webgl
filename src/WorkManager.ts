@@ -65,7 +65,7 @@ class WorkManager {
     public async init(name: string) {
         this.restore(this.WorkObjectPool[name].width, this.WorkObjectPool[name].height);
         await this.WorkObjectPool[name].init();
-        if(this.WorkObjectPool[name].pointer) this.resetPointer(work.view);
+        if (this.WorkObjectPool[name].pointer) this.resetPointer(work.view);
         this.timerFunction = () => {
             this.WorkObjectPool[name].update();
         }
@@ -128,7 +128,7 @@ class WorkManager {
     }
 
     public delPointer(view) {
-        if(!view) return;
+        if (!view) return;
         view.removeEventListener('mousemove', this.onMousemove);
         view.removeEventListener('click', this.onClick);
         document.removeEventListener('pointerlockchange', this.onPointerLockChange);

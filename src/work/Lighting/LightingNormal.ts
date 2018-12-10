@@ -230,6 +230,7 @@ namespace Work.Lighting {
             this.shader.setVec3('lightColor', vec3.fromValues(1, 1, 1));
             this.shader.setVec3('objectColor', vec3.fromValues(1, 0.5, 0.31));
             this.shader.setVec3('lightPos', this.lightPos);
+            this.shader.setVec3('viewPos', this.cameraPos);
             gl.drawArrays(gl.TRIANGLES, 0, 36);
 
 
