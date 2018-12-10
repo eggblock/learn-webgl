@@ -31,11 +31,14 @@ class WorkManager {
 
         document.body.addEventListener('keydown', (e) => {
             if (this.KeyDownFn[e.key]) this.KeyDownFn[e.key]();
-        })
+        });
 
         document.body.addEventListener('keyup', (e) => {
             if (this.KeyUpFn[e.key]) this.KeyUpFn[e.key]();
-        })
+        });
+
+
+        this.resetPointer(work.view);
     }
 
     public keydown(key: string, fn: Function) {
@@ -62,6 +65,7 @@ class WorkManager {
     public async init(name: string) {
         this.restore(this.WorkObjectPool[name].width, this.WorkObjectPool[name].height);
         await this.WorkObjectPool[name].init();
+        if(this.WorkObjectPool[name].pointer) this.resetPointer(work.view);
         this.timerFunction = () => {
             this.WorkObjectPool[name].update();
         }
@@ -88,6 +92,8 @@ class WorkManager {
         let id = `view-${Math.random().toString().replace('.', "")}`;
         context.innerHTML = `<canvas id="${id}" class="view" width="${w}" height="${h}"></canvas>`;
         console.log(id);
+        delete work.view;
+        this.delPointer(work.view);
         work.view = document.querySelector(`#${id}`);
 
         if (!work.view) {
@@ -95,5 +101,49 @@ class WorkManager {
             return;
         }
         work.gl = <WebGLRenderingContext>work.view.getContext("webgl");
+    }
+
+
+    public onMousemove(e) {
+        if (!work.pointer.enable) return;
+        work.pointer.mx = e.movementX;
+        work.pointer.my = e.movementY;
+        work.pointer.update = true;
+    }
+
+    public onClick() {
+        if (!work.pointer.enable) return;
+        work.pointer.lock = true;
+        work.view.requestPointerLock();
+    }
+
+    public onPointerLockChange() {
+        console.log('change')
+        if (document.pointerLockElement === work.view) {
+            work.pointer.lock = true;
+        } else {
+            // document.exitPointerLock();
+            work.pointer.lock = false;
+        }
+    }
+
+    public delPointer(view) {
+        if(!view) return;
+        view.removeEventListener('mousemove', this.onMousemove);
+        view.removeEventListener('click', this.onClick);
+        document.removeEventListener('pointerlockchange', this.onPointerLockChange);
+    }
+
+    public resetPointer(view: any) {
+        work.pointer = {
+            mx: 0,
+            my: 0,
+            update: false,
+            enable: false,
+            lock: false
+        }
+        view.addEventListener('mousemove', this.onMousemove);
+        view.addEventListener('click', this.onClick);
+        document.addEventListener('pointerlockchange', this.onPointerLockChange);
     }
 }

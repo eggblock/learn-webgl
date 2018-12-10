@@ -2,47 +2,47 @@ namespace Work.Lighting {
     export class LightingNormal extends HomeWork {
 
         public readonly vertices = [
-                -0.5, -0.5, -0.5,  0.0,  0.0, -1.0,
-                 0.5, -0.5, -0.5,  0.0,  0.0, -1.0, 
-                 0.5,  0.5, -0.5,  0.0,  0.0, -1.0, 
-                 0.5,  0.5, -0.5,  0.0,  0.0, -1.0, 
-                -0.5,  0.5, -0.5,  0.0,  0.0, -1.0, 
-                -0.5, -0.5, -0.5,  0.0,  0.0, -1.0, 
-            
-                -0.5, -0.5,  0.5,  0.0,  0.0, 1.0,
-                 0.5, -0.5,  0.5,  0.0,  0.0, 1.0,
-                 0.5,  0.5,  0.5,  0.0,  0.0, 1.0,
-                 0.5,  0.5,  0.5,  0.0,  0.0, 1.0,
-                -0.5,  0.5,  0.5,  0.0,  0.0, 1.0,
-                -0.5, -0.5,  0.5,  0.0,  0.0, 1.0,
-            
-                -0.5,  0.5,  0.5, -1.0,  0.0,  0.0,
-                -0.5,  0.5, -0.5, -1.0,  0.0,  0.0,
-                -0.5, -0.5, -0.5, -1.0,  0.0,  0.0,
-                -0.5, -0.5, -0.5, -1.0,  0.0,  0.0,
-                -0.5, -0.5,  0.5, -1.0,  0.0,  0.0,
-                -0.5,  0.5,  0.5, -1.0,  0.0,  0.0,
-            
-                 0.5,  0.5,  0.5,  1.0,  0.0,  0.0,
-                 0.5,  0.5, -0.5,  1.0,  0.0,  0.0,
-                 0.5, -0.5, -0.5,  1.0,  0.0,  0.0,
-                 0.5, -0.5, -0.5,  1.0,  0.0,  0.0,
-                 0.5, -0.5,  0.5,  1.0,  0.0,  0.0,
-                 0.5,  0.5,  0.5,  1.0,  0.0,  0.0,
-            
-                -0.5, -0.5, -0.5,  0.0, -1.0,  0.0,
-                 0.5, -0.5, -0.5,  0.0, -1.0,  0.0,
-                 0.5, -0.5,  0.5,  0.0, -1.0,  0.0,
-                 0.5, -0.5,  0.5,  0.0, -1.0,  0.0,
-                -0.5, -0.5,  0.5,  0.0, -1.0,  0.0,
-                -0.5, -0.5, -0.5,  0.0, -1.0,  0.0,
-            
-                -0.5,  0.5, -0.5,  0.0,  1.0,  0.0,
-                 0.5,  0.5, -0.5,  0.0,  1.0,  0.0,
-                 0.5,  0.5,  0.5,  0.0,  1.0,  0.0,
-                 0.5,  0.5,  0.5,  0.0,  1.0,  0.0,
-                -0.5,  0.5,  0.5,  0.0,  1.0,  0.0,
-                -0.5,  0.5, -0.5,  0.0,  1.0,  0.0
+            -0.5, -0.5, -0.5, 0.0, 0.0, -1.0,
+            0.5, -0.5, -0.5, 0.0, 0.0, -1.0,
+            0.5, 0.5, -0.5, 0.0, 0.0, -1.0,
+            0.5, 0.5, -0.5, 0.0, 0.0, -1.0,
+            -0.5, 0.5, -0.5, 0.0, 0.0, -1.0,
+            -0.5, -0.5, -0.5, 0.0, 0.0, -1.0,
+
+            -0.5, -0.5, 0.5, 0.0, 0.0, 1.0,
+            0.5, -0.5, 0.5, 0.0, 0.0, 1.0,
+            0.5, 0.5, 0.5, 0.0, 0.0, 1.0,
+            0.5, 0.5, 0.5, 0.0, 0.0, 1.0,
+            -0.5, 0.5, 0.5, 0.0, 0.0, 1.0,
+            -0.5, -0.5, 0.5, 0.0, 0.0, 1.0,
+
+            -0.5, 0.5, 0.5, -1.0, 0.0, 0.0,
+            -0.5, 0.5, -0.5, -1.0, 0.0, 0.0,
+            -0.5, -0.5, -0.5, -1.0, 0.0, 0.0,
+            -0.5, -0.5, -0.5, -1.0, 0.0, 0.0,
+            -0.5, -0.5, 0.5, -1.0, 0.0, 0.0,
+            -0.5, 0.5, 0.5, -1.0, 0.0, 0.0,
+
+            0.5, 0.5, 0.5, 1.0, 0.0, 0.0,
+            0.5, 0.5, -0.5, 1.0, 0.0, 0.0,
+            0.5, -0.5, -0.5, 1.0, 0.0, 0.0,
+            0.5, -0.5, -0.5, 1.0, 0.0, 0.0,
+            0.5, -0.5, 0.5, 1.0, 0.0, 0.0,
+            0.5, 0.5, 0.5, 1.0, 0.0, 0.0,
+
+            -0.5, -0.5, -0.5, 0.0, -1.0, 0.0,
+            0.5, -0.5, -0.5, 0.0, -1.0, 0.0,
+            0.5, -0.5, 0.5, 0.0, -1.0, 0.0,
+            0.5, -0.5, 0.5, 0.0, -1.0, 0.0,
+            -0.5, -0.5, 0.5, 0.0, -1.0, 0.0,
+            -0.5, -0.5, -0.5, 0.0, -1.0, 0.0,
+
+            -0.5, 0.5, -0.5, 0.0, 1.0, 0.0,
+            0.5, 0.5, -0.5, 0.0, 1.0, 0.0,
+            0.5, 0.5, 0.5, 0.0, 1.0, 0.0,
+            0.5, 0.5, 0.5, 0.0, 1.0, 0.0,
+            -0.5, 0.5, 0.5, 0.0, 1.0, 0.0,
+            -0.5, 0.5, -0.5, 0.0, 1.0, 0.0
         ];
 
         public shader: Shader;
@@ -52,6 +52,8 @@ namespace Work.Lighting {
         public height = 540;
 
         public program: WebGLProgram;
+
+        public pointer: boolean = true;
 
 
         public async init() {
@@ -127,14 +129,20 @@ namespace Work.Lighting {
         public cameraUp = vec3.fromValues(0.0, 1.0, 0.0);
         cameraSpeed = 0.2;
 
-        lightPos = vec3.fromValues(1.0, 1.2, -2.0)
+        public sensitivity = 0.005;
+
+        lightPos = vec3.fromValues(1.0, 1.2, -2.0);
+
+        yaw = 0;
+        pitch = 0;
 
         public update() {
             let gl = this.work.gl;
+            this.work.pointer.enable = true;
 
             gl.enable(gl.DEPTH_TEST);
 
-            gl.clearColor(0,0,0, 1.0);
+            gl.clearColor(0, 0, 0, 1.0);
             gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
 
@@ -152,12 +160,36 @@ namespace Work.Lighting {
             // let camX = Math.sin(this.angle / 100) * radius;
             // let camZ = Math.cos(this.angle / 100) * radius;
 
+            if (this.work.pointer.enable && this.work.pointer.lock && this.work.pointer.update) {
+                let front = vec3.create();
+                let x = this.work.pointer.mx * this.sensitivity;
+                let y = this.work.pointer.my * this.sensitivity;
+                let yaw = this.yaw += x;
+                let pitch = this.pitch += -y;
+
+                if (pitch > 1.55)
+                    pitch =this.pitch = 1.54;
+                if (pitch < -1.55)
+                    pitch = this.pitch = -1.54;
+                console.log(y,yaw,this.pitch);
+                front[0] = Math.cos(yaw) * Math.cos(pitch);
+                front[1] = Math.sin(pitch);
+                front[2] = Math.sin(yaw) * Math.cos(pitch);
+
+                vec3.normalize(this.cameraFront, front);
+                this.work.pointer.update = false;
+            }
+
             if (this.key_status.w) {
+                this.cameraPos[0] += this.cameraFront[0] * this.cameraSpeed;
+                this.cameraPos[1] += this.cameraFront[1] * this.cameraSpeed;
                 this.cameraPos[2] += this.cameraFront[2] * this.cameraSpeed;
             }
 
             if (this.key_status.s) {
-                this.cameraPos[2] -= this.cameraFront[2] * this.cameraSpeed
+                this.cameraPos[0] -= this.cameraFront[0] * this.cameraSpeed;
+                this.cameraPos[1] -= this.cameraFront[1] * this.cameraSpeed;
+                this.cameraPos[2] -= this.cameraFront[2] * this.cameraSpeed;
             }
 
             if (this.key_status.a) {
@@ -197,6 +229,7 @@ namespace Work.Lighting {
             this.shader.setMat4('model', modelmat);
             this.shader.setVec3('lightColor', vec3.fromValues(1, 1, 1));
             this.shader.setVec3('objectColor', vec3.fromValues(1, 0.5, 0.31));
+            this.shader.setVec3('lightPos', this.lightPos);
             gl.drawArrays(gl.TRIANGLES, 0, 36);
 
 

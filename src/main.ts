@@ -1,6 +1,15 @@
 class MyWork {
     public view: HTMLCanvasElement;
     public gl: WebGLRenderingContext;
+
+
+    public pointer: PointerInfo = {
+        mx: 0,
+        my: 0,
+        update: false,
+        enable: false,
+        lock: false
+    };
     constructor() {
         this.view = document.querySelector("#view");
 
@@ -23,6 +32,8 @@ class MyWork {
 
         new Work.Lighting.Colors('Colors');
         new Work.Lighting.Lighting('Lighting');
+        new Work.Lighting.LightingNormal('LightingNormal');
+
     }
 
     public clear(indata: any) {
@@ -34,3 +45,12 @@ class MyWork {
         gl.clear(gl.COLOR_BUFFER_BIT);
     }
 } 
+
+
+interface PointerInfo {
+    mx: number;
+    my: number;
+    update: boolean;
+    enable: boolean;
+    lock: boolean;
+}
