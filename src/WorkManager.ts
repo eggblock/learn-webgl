@@ -92,7 +92,6 @@ class WorkManager {
         let id = `view-${Math.random().toString().replace('.', "")}`;
         context.innerHTML = `<canvas id="${id}" class="view" width="${w}" height="${h}"></canvas>`;
         console.log(id);
-        delete work.view;
         this.delPointer(work.view);
         work.view = document.querySelector(`#${id}`);
 
@@ -118,7 +117,6 @@ class WorkManager {
     }
 
     public onPointerLockChange() {
-        console.log('change')
         if (document.pointerLockElement === work.view) {
             work.pointer.lock = true;
         } else {
@@ -129,6 +127,13 @@ class WorkManager {
 
     public delPointer(view) {
         if (!view) return;
+        work.pointer = {
+            mx: 0,
+            my: 0,
+            update: false,
+            enable: false,
+            lock: false
+        }
         view.removeEventListener('mousemove', this.onMousemove);
         view.removeEventListener('click', this.onClick);
         document.removeEventListener('pointerlockchange', this.onPointerLockChange);
@@ -139,7 +144,7 @@ class WorkManager {
             mx: 0,
             my: 0,
             update: false,
-            enable: false,
+            enable: true,
             lock: false
         }
         view.addEventListener('mousemove', this.onMousemove);

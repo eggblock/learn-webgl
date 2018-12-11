@@ -116,8 +116,6 @@ namespace Work.Lighting {
 
         public tex;
 
-        public started: boolean = false;
-
         public angle: number = 0;
 
         public VBO;
@@ -138,7 +136,7 @@ namespace Work.Lighting {
 
         public update() {
             let gl = this.work.gl;
-            this.work.pointer.enable = true;
+            // this.work.pointer.enable = true;
 
             gl.enable(gl.DEPTH_TEST);
 
@@ -160,7 +158,7 @@ namespace Work.Lighting {
             // let camX = Math.sin(this.angle / 100) * radius;
             // let camZ = Math.cos(this.angle / 100) * radius;
 
-            if (this.work.pointer.enable && this.work.pointer.lock && this.work.pointer.update) {
+            if (this.work.pointer.lock && this.work.pointer.update) {
                 let front = vec3.create();
                 let x = this.work.pointer.mx * this.sensitivity;
                 let y = this.work.pointer.my * this.sensitivity;
@@ -171,7 +169,6 @@ namespace Work.Lighting {
                     pitch =this.pitch = 1.54;
                 if (pitch < -1.55)
                     pitch = this.pitch = -1.54;
-                console.log(y,yaw,this.pitch);
                 front[0] = Math.cos(yaw) * Math.cos(pitch);
                 front[1] = Math.sin(pitch);
                 front[2] = Math.sin(yaw) * Math.cos(pitch);

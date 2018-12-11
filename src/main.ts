@@ -33,6 +33,7 @@ class MyWork {
         new Work.Lighting.Colors('Colors');
         new Work.Lighting.Lighting('Lighting');
         new Work.Lighting.LightingNormal('LightingNormal');
+        new Work.Lighting.Material('Material');
 
     }
 
