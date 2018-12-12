@@ -1,47 +1,47 @@
 namespace Work.Lighting {
-    export class Material extends PointerWork {
+    export class Map extends PointerWork {
         public readonly vertices = [
-            -0.5, -0.5, -0.5, 0.0, 0.0, -1.0,
-            0.5, -0.5, -0.5, 0.0, 0.0, -1.0,
-            0.5, 0.5, -0.5, 0.0, 0.0, -1.0,
-            0.5, 0.5, -0.5, 0.0, 0.0, -1.0,
-            -0.5, 0.5, -0.5, 0.0, 0.0, -1.0,
-            -0.5, -0.5, -0.5, 0.0, 0.0, -1.0,
+            -0.5, -0.5, -0.5, 0.0, 0.0, -1.0, 0.0, 0.0,
+            0.5, -0.5, -0.5, 0.0, 0.0, -1.0, 1.0, 0.0,
+            0.5, 0.5, -0.5, 0.0, 0.0, -1.0, 1.0, 1.0,
+            0.5, 0.5, -0.5, 0.0, 0.0, -1.0, 1.0, 1.0,
+            -0.5, 0.5, -0.5, 0.0, 0.0, -1.0, 0.0, 1.0,
+            -0.5, -0.5, -0.5, 0.0, 0.0, -1.0, 0.0, 0.0,
 
-            -0.5, -0.5, 0.5, 0.0, 0.0, 1.0,
-            0.5, -0.5, 0.5, 0.0, 0.0, 1.0,
-            0.5, 0.5, 0.5, 0.0, 0.0, 1.0,
-            0.5, 0.5, 0.5, 0.0, 0.0, 1.0,
-            -0.5, 0.5, 0.5, 0.0, 0.0, 1.0,
-            -0.5, -0.5, 0.5, 0.0, 0.0, 1.0,
+            -0.5, -0.5, 0.5, 0.0, 0.0, 1.0, 0.0, 0.0,
+            0.5, -0.5, 0.5, 0.0, 0.0, 1.0, 1.0, 0.0,
+            0.5, 0.5, 0.5, 0.0, 0.0, 1.0, 1.0, 1.0,
+            0.5, 0.5, 0.5, 0.0, 0.0, 1.0, 1.0, 1.0,
+            -0.5, 0.5, 0.5, 0.0, 0.0, 1.0, 0.0, 1.0,
+            -0.5, -0.5, 0.5, 0.0, 0.0, 1.0, 0.0, 0.0,
 
-            -0.5, 0.5, 0.5, -1.0, 0.0, 0.0,
-            -0.5, 0.5, -0.5, -1.0, 0.0, 0.0,
-            -0.5, -0.5, -0.5, -1.0, 0.0, 0.0,
-            -0.5, -0.5, -0.5, -1.0, 0.0, 0.0,
-            -0.5, -0.5, 0.5, -1.0, 0.0, 0.0,
-            -0.5, 0.5, 0.5, -1.0, 0.0, 0.0,
+            -0.5, 0.5, 0.5, -1.0, 0.0, 0.0, 1.0, 0.0,
+            -0.5, 0.5, -0.5, -1.0, 0.0, 0.0, 1.0, 1.0,
+            -0.5, -0.5, -0.5, -1.0, 0.0, 0.0, 0.0, 1.0,
+            -0.5, -0.5, -0.5, -1.0, 0.0, 0.0, 0.0, 1.0,
+            -0.5, -0.5, 0.5, -1.0, 0.0, 0.0, 0.0, 0.0,
+            -0.5, 0.5, 0.5, -1.0, 0.0, 0.0, 1.0, 0.0,
 
-            0.5, 0.5, 0.5, 1.0, 0.0, 0.0,
-            0.5, 0.5, -0.5, 1.0, 0.0, 0.0,
-            0.5, -0.5, -0.5, 1.0, 0.0, 0.0,
-            0.5, -0.5, -0.5, 1.0, 0.0, 0.0,
-            0.5, -0.5, 0.5, 1.0, 0.0, 0.0,
-            0.5, 0.5, 0.5, 1.0, 0.0, 0.0,
+            0.5, 0.5, 0.5, 1.0, 0.0, 0.0, 1.0, 0.0,
+            0.5, 0.5, -0.5, 1.0, 0.0, 0.0, 1.0, 1.0,
+            0.5, -0.5, -0.5, 1.0, 0.0, 0.0, 0.0, 1.0,
+            0.5, -0.5, -0.5, 1.0, 0.0, 0.0, 0.0, 1.0,
+            0.5, -0.5, 0.5, 1.0, 0.0, 0.0, 0.0, 0.0,
+            0.5, 0.5, 0.5, 1.0, 0.0, 0.0, 1.0, 0.0,
 
-            -0.5, -0.5, -0.5, 0.0, -1.0, 0.0,
-            0.5, -0.5, -0.5, 0.0, -1.0, 0.0,
-            0.5, -0.5, 0.5, 0.0, -1.0, 0.0,
-            0.5, -0.5, 0.5, 0.0, -1.0, 0.0,
-            -0.5, -0.5, 0.5, 0.0, -1.0, 0.0,
-            -0.5, -0.5, -0.5, 0.0, -1.0, 0.0,
+            -0.5, -0.5, -0.5, 0.0, -1.0, 0.0, 0.0, 1.0,
+            0.5, -0.5, -0.5, 0.0, -1.0, 0.0, 1.0, 1.0,
+            0.5, -0.5, 0.5, 0.0, -1.0, 0.0, 1.0, 0.0,
+            0.5, -0.5, 0.5, 0.0, -1.0, 0.0, 1.0, 0.0,
+            -0.5, -0.5, 0.5, 0.0, -1.0, 0.0, 0.0, 0.0,
+            -0.5, -0.5, -0.5, 0.0, -1.0, 0.0, 0.0, 1.0,
 
-            -0.5, 0.5, -0.5, 0.0, 1.0, 0.0,
-            0.5, 0.5, -0.5, 0.0, 1.0, 0.0,
-            0.5, 0.5, 0.5, 0.0, 1.0, 0.0,
-            0.5, 0.5, 0.5, 0.0, 1.0, 0.0,
-            -0.5, 0.5, 0.5, 0.0, 1.0, 0.0,
-            -0.5, 0.5, -0.5, 0.0, 1.0, 0.0
+            -0.5, 0.5, -0.5, 0.0, 1.0, 0.0, 0.0, 1.0,
+            0.5, 0.5, -0.5, 0.0, 1.0, 0.0, 1.0, 1.0,
+            0.5, 0.5, 0.5, 0.0, 1.0, 0.0, 1.0, 0.0,
+            0.5, 0.5, 0.5, 0.0, 1.0, 0.0, 1.0, 0.0,
+            -0.5, 0.5, 0.5, 0.0, 1.0, 0.0, 0.0, 0.0,
+            -0.5, 0.5, -0.5, 0.0, 1.0, 0.0, 0.0, 1.0
         ];
 
         public shader: Shader;
@@ -57,7 +57,7 @@ namespace Work.Lighting {
             super.init();
             let gl = this.work.gl;
             this.lampshader = await Shader.create('./glsl/transfromations2.vert', './glsl/colors.lamp.frag', gl);
-            let shader: Shader = this.shader = await Shader.create('./glsl/lighting/lighting.normal.vert', './glsl/lighting/materials.frag', gl);
+            let shader: Shader = this.shader = await Shader.create('./glsl/lighting/map.vert', './glsl/lighting/map.frag', gl);
 
             let program = this.program = shader.ID;
 
@@ -68,12 +68,17 @@ namespace Work.Lighting {
             gl.bufferData(gl.ARRAY_BUFFER, v, gl.STATIC_DRAW);
 
             var aPos = gl.getAttribLocation(program, 'aPos');
-            gl.vertexAttribPointer(aPos, 3, gl.FLOAT, false, 6 * v.BYTES_PER_ELEMENT, 0);
+            gl.vertexAttribPointer(aPos, 3, gl.FLOAT, false, 8 * v.BYTES_PER_ELEMENT, 0);
             gl.enableVertexAttribArray(aPos);
 
             var aNormal = gl.getAttribLocation(program, 'aNormal');
-            gl.vertexAttribPointer(aNormal, 3, gl.FLOAT, false, 6 * v.BYTES_PER_ELEMENT, 3 * v.BYTES_PER_ELEMENT);
+            gl.vertexAttribPointer(aNormal, 3, gl.FLOAT, false, 8 * v.BYTES_PER_ELEMENT, 3 * v.BYTES_PER_ELEMENT);
             gl.enableVertexAttribArray(aNormal);
+
+            var aTexCoord = gl.getAttribLocation(program, 'aTexCoord');
+            gl.vertexAttribPointer(aTexCoord, 2, gl.FLOAT, false, 8 * v.BYTES_PER_ELEMENT, 6 * v.BYTES_PER_ELEMENT);
+            gl.enableVertexAttribArray(aTexCoord);
+
 
 
             gl.bindBuffer(gl.ARRAY_BUFFER, VBO);
@@ -115,9 +120,9 @@ namespace Work.Lighting {
             this.shader.setVec3('objectColor', vec3.fromValues(1, 0.5, 0.31));
             this.shader.setVec3('lightPos', this.lightPos);
             this.shader.setVec3('viewPos', this.cameraPos);
-            
-            this.shader.setVec3("material.ambient",  vec3.fromValues(1.0, 0.5, 0.31));
-            this.shader.setVec3("material.diffuse",  vec3.fromValues(1.0, 0.5, 0.31));
+
+            this.shader.setVec3("material.ambient", vec3.fromValues(1.0, 0.5, 0.31));
+            this.shader.setVec3("material.diffuse", vec3.fromValues(1.0, 0.5, 0.31));
             this.shader.setVec3("material.specular", vec3.fromValues(0.5, 0.5, 0.5));
             this.shader.setFloat("material.shininess", 32.0);
 
@@ -125,7 +130,6 @@ namespace Work.Lighting {
             this.shader.setVec3("light.diffuse", vec3.fromValues(0.5, 0.5, 0.5));
             this.shader.setVec3("light.specular", vec3.fromValues(1.0, 1.0, 1.0));
             gl.drawArrays(gl.TRIANGLES, 0, 36);
-
 
             //lamp
             modelmat = mat4.create();

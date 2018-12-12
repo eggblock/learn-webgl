@@ -26,7 +26,7 @@ class MyWork {
         new WorkWithTextures2("Textures2");
         new WorkWithTransformations("Transformations");
         new WorkWithTransformations2("Transformations2");
-        new WorkWithTransformations3("Transformations3");``
+        new WorkWithTransformations3("Transformations3");
         new WorkWithCamera('Camera');
         new Work.intro.Camera2('Camera2');
 
@@ -34,6 +34,7 @@ class MyWork {
         new Work.Lighting.Lighting('Lighting');
         new Work.Lighting.LightingNormal('LightingNormal');
         new Work.Lighting.Material('Material');
+        // new Work.Lighting.Map('Map');
 
     }
 

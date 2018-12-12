@@ -73,9 +73,9 @@ namespace Work.Lighting {
             gl.vertexAttribPointer(aPos, 3, gl.FLOAT, false, 6 * v.BYTES_PER_ELEMENT, 0);
             gl.enableVertexAttribArray(aPos);
 
-            var aTexCoord = gl.getAttribLocation(program, 'aNormal');
-            gl.vertexAttribPointer(aTexCoord, 3, gl.FLOAT, false, 6 * v.BYTES_PER_ELEMENT, 3 * v.BYTES_PER_ELEMENT);
-            gl.enableVertexAttribArray(aTexCoord);
+            var aNormal = gl.getAttribLocation(program, 'aNormal');
+            gl.vertexAttribPointer(aNormal, 3, gl.FLOAT, false, 6 * v.BYTES_PER_ELEMENT, 3 * v.BYTES_PER_ELEMENT);
+            gl.enableVertexAttribArray(aNormal);
 
 
             gl.bindBuffer(gl.ARRAY_BUFFER, VBO);
